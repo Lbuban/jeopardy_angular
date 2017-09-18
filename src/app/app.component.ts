@@ -10,7 +10,8 @@ export class AppComponent implements OnInit {
   title = 'Jeopardy!';
 
   questionInfo;
-
+  userAnswer: string;
+  
   constructor(private jeopardyService: JeopardyService){}
 
 getDataFromService(){
@@ -23,6 +24,18 @@ getDataFromService(){
  }
 
  ngOnInit(){
-   this.getDataFromService()
+   this.getDataFromService() //calling it so that our data loads as soon as the page loads.
  }
+
+clickSubmit(userAnswer){
+  if this.selectedThing 
+
+
+//   useranswer = answer
+//   alert("Correct! You just added " + pointValue + " points to your score.");
+//     counter += pointValue
+// }else {
+//   alert("Incorrect! The right answer is " + answer + ".")
+// }
+
 }
