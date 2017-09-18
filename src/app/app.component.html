@@ -18,14 +18,16 @@ Point Value: {{questionInfo?.value}}
   <div class="textbox">
     <div id="textarea">
       <label for="name">Answer:</label>
-      <input id="answer" type="text" placeholder="What is...">
+      <input name="answer" type="text" [(ngModel)]="userAnswer" placeholder="What is...">
     </div>
   </div>
 </form>
-<button id="button">Submit</button>
+<button (click)="onClickMe()" >Submit</button>
 <div id="score">
-  <h3>Total Score: <span id="counter">0</span></h3>
+  <h3>Total Score:  {{counter}}</h3>
 </div>
+
+Answer: {{questionInfo?.answer}}
 
 
 

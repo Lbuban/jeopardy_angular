@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { JeopardyService } from './jeopardy.service';
 
 @Component({
@@ -9,8 +10,9 @@ import { JeopardyService } from './jeopardy.service';
 export class AppComponent implements OnInit {
   title = 'Jeopardy!';
 
-  questionInfo;
+  questionInfo; //questionInfo.answer
   userAnswer: string;
+  counter: number =0;
   
   constructor(private jeopardyService: JeopardyService){}
 
@@ -27,15 +29,12 @@ getDataFromService(){
    this.getDataFromService() //calling it so that our data loads as soon as the page loads.
  }
 
-clickSubmit(userAnswer){
-  if this.selectedThing 
+ onClickMe (){
+ if (this.questionInfo.answer === this.userAnswer){
+   alert("correct")
+   this.counter += this.questionInfo.value
+ } 
+this.getDataFromService()
 
-
-//   useranswer = answer
-//   alert("Correct! You just added " + pointValue + " points to your score.");
-//     counter += pointValue
-// }else {
-//   alert("Incorrect! The right answer is " + answer + ".")
-// }
-
+ }
 }
