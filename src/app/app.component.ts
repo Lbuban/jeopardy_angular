@@ -11,9 +11,8 @@ export class AppComponent implements OnInit {
   title = 'Jeopardy!';
 
   
-    questionInfo; //questionInfo.answer
-    // userAnswer: string;
-    // counter: number =0;
+    questionInfo; 
+  
 
   
   constructor(private jeopardyService: JeopardyService){}
@@ -31,5 +30,6 @@ getDataFromService(){
    this.getDataFromService() //calling it so that our data loads as soon as the page loads.
  }
 
+ 
 
  }

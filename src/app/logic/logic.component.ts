@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -12,6 +12,7 @@ export class LogicComponent implements OnInit {
   }
 
   @Input()questionInfo;
+  @Output() refreshAnswer = new EventEmitter<any>();
 
   userAnswer: string;
   counter: number =0;
@@ -25,7 +26,9 @@ export class LogicComponent implements OnInit {
    this.counter += this.questionInfo.value
  } 
 
- this.getDataFromService()
+ 
+ this.refreshAnswer.emit();
+ this.userAnswer=''
 
  }
 }
