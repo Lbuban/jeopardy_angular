@@ -9,20 +9,17 @@ import { JeopardyService } from './jeopardy.service'; // need for jeopard API
 })
 export class AppComponent implements OnInit {
   title = 'Jeopardy!';
-
   
-    questionInfo; 
-  
-
+  questionInfo; // variable
   
   constructor(private jeopardyService: JeopardyService){}
 
-getDataFromService(){ 
-  this.jeopardyService.getQuestionInfo()
+getDataFromService(){
+  this.jeopardyService.getQuestionInfo() //api question
     .subscribe ( //once the map (success) method runs, then do this.
       questionInfo => {
-        this.questionInfo = questionInfo[0];
-      }
+        this.questionInfo = questionInfo[0]; // grab question from array
+      } 
     )
  }
 

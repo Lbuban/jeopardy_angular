@@ -8,8 +8,14 @@ Question: {{questionInfo?.question}}
 Point Value: {{questionInfo?.value}}
 <br>
 
+<!-- connecter 
+questionInfo for Input
+refreshAnswers for Output --> 
+
 <app-logic 
-[questionInfo]="questionInfo"
-(refreshAnswer)="getDataFromService($event)"
+[questionInfo]="questionInfo" 
+(refreshAnswer)="getDataFromService($event)" 
 ></app-logic>
 
+<!-- child left - parent right -->
+<!--  -->
