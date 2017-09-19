@@ -1,9 +1,6 @@
 
 <h1>Jeopardy!</h1>
 
-<!-- display info from api -->
-
-<br>
 Category: {{questionInfo?.category.title | uppercase}}
 <br>
 Question: {{questionInfo?.question}}
@@ -11,21 +8,7 @@ Question: {{questionInfo?.question}}
 Point Value: {{questionInfo?.value}}
 <br>
 
-<!-- player answer input form -->
-<form>
-  <div class="textbox">
-    <div id="textarea">
-      <label for="name">Answer:</label>
-      <input name="answer" type="text" [(ngModel)]="userAnswer" placeholder="What is...">
-    </div>
-  </div>
-</form>
-<button (click)="onClickMe()" >Submit</button>
-
-  <h3>Total Score:  {{counter}}</h3>
-
- 
-
-
-
+<app-logic 
+[questionInfo]="questionInfo"
+></app-logic>
 
