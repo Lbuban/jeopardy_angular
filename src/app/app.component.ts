@@ -10,9 +10,11 @@ import { JeopardyService } from './jeopardy.service';
 export class AppComponent implements OnInit {
   title = 'Jeopardy!';
 
-  questionInfo; //questionInfo.answer
-  userAnswer: string;
-  counter: number =0;
+  
+    questionInfo; //questionInfo.answer
+    // userAnswer: string;
+    // counter: number =0;
+
   
   constructor(private jeopardyService: JeopardyService){}
 
@@ -29,12 +31,5 @@ getDataFromService(){
    this.getDataFromService() //calling it so that our data loads as soon as the page loads.
  }
 
- onClickMe (){
- if (this.questionInfo.answer === this.userAnswer){
-   alert("correct")
-   this.counter += this.questionInfo.value
- } 
-this.getDataFromService()
 
  }
-}

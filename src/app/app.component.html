@@ -6,7 +6,6 @@
 </div>
 
 
-<!--The content below is only a placeholder and can be replaced.-->
 Category: {{questionInfo?.category.title | uppercase}}
 <br>
 Question: {{questionInfo?.question}}
@@ -14,20 +13,9 @@ Question: {{questionInfo?.question}}
 Point Value: {{questionInfo?.value}}
 <br>
 
-<form>
-  <div class="textbox">
-    <div id="textarea">
-      <label for="name">Answer:</label>
-      <input name="answer" type="text" [(ngModel)]="userAnswer" placeholder="What is...">
-    </div>
-  </div>
-</form>
-<button (click)="onClickMe()" >Submit</button>
-<div id="score">
-  <h3>Total Score:  {{counter}}</h3>
-</div>
-
-Answer: {{questionInfo?.answer}}
 
 
+<app-logic 
+[questionInfo]="questionInfo"
+></app-logic>
 
