@@ -13,12 +13,12 @@ export class LogicComponent implements OnInit {
   ngOnInit() {
   }
 
-  @Input()questionInfo; //from parent
-  @Output() refreshAnswer = new EventEmitter<any>(); //to parent
+  @Input()questionInfo; //In order to use questionInfo below, we need to link it from parent (add Input to import statement above) 
+  @Output()refreshAnswer = new EventEmitter<void>(); //Tell the parent to provide a new question (add OutPut and EventEmitter to import statement above) and add emit event below.
 
   userAnswer: string;
   counter: number =0;
-  getDataFromService;
+ 
   
   constructor(){}
 
