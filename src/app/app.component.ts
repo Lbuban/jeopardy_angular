@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { JeopardyService } from './jeopardy.service';
+import { FormsModule } from '@angular/forms'; //need this for input field
+import { JeopardyService } from './jeopardy.service'; // need for jeopard API
 
 @Component({
   selector: 'app-root',
@@ -9,16 +9,10 @@ import { JeopardyService } from './jeopardy.service';
 })
 export class AppComponent implements OnInit {
   title = 'Jeopardy!';
-
-  
-    questionInfo; //questionInfo.answer
-    // userAnswer: string;
-    // counter: number =0;
-
   
   constructor(private jeopardyService: JeopardyService){}
 
-getDataFromService(){
+getDataFromService(){ 
   this.jeopardyService.getQuestionInfo()
     .subscribe ( //once the map (success) method runs, then do this.
       questionInfo => {
@@ -29,7 +23,4 @@ getDataFromService(){
 
  ngOnInit(){
    this.getDataFromService() //calling it so that our data loads as soon as the page loads.
- }
-
-
  }
